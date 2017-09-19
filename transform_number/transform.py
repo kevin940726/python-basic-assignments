@@ -7,10 +7,6 @@ def transform(n):
     Given '8649', return '4096'
     Given '0001', return '0000'
   '''
-  middle = n[1:3]
-  result = int(middle) ** 2
-  prefixed = '000' + str(result)
-  return prefixed[-4:]
 
 def transform_list(n):
   '''
@@ -22,11 +18,3 @@ def transform_list(n):
     Given '8649', return ['4096', '0081', '0064', '0036', '0009', '0000']
     Given '3025', return ['0004', '0000']
   '''
-  list = []
-  result = transform(n)
-
-  while not len(list) or not result == list[-1]:
-    list.append(result)
-    result = transform(result)
-
-  return list

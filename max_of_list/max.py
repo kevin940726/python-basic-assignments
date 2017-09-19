@@ -7,10 +7,3 @@ def max(list):
     Given [1, 5, 3, 2, 4], return `5`
     Given [], return `None`
   '''
-  result = None
-
-  for item in list:
-    if item > result:
-      result = item
-
-  return result
